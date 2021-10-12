@@ -2,6 +2,10 @@
 
 Vuetify 2 data table that implements FeathersJS pagination
 
+## Prerequisites
+
+    npm install --save moment
+
 ## Installation
 
     npm install --save feathers-data-table
