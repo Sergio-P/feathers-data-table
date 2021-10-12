@@ -3,6 +3,8 @@ module.exports = {
         extract: false
     },
     configureWebpack: {
-        externals: {}
+        externals: {
+            moment: "moment"
+        }
     }
 };
