@@ -12,9 +12,8 @@
     :item-class="(item) => rowClasses(item)"
   >
     <template v-slot:[attr.itemslot]="{ item }" v-for="attr in headers">
-      <span :class="attr._class">{{
-        attr.labelMap ? attr.labelMap[item[attr.value]] : item[attr.value]
-      }}</span>
+      <div :class="attr.classMap ? attr.classMap[item[attr.value]] : attr._class" v-if="!attr.customslot" v-html="attr.labelMap ? attr.labelMap[item[attr.value]] : item[attr.value]"></div>
+      <slot v-else :name="attr.itemslot" :item="item" />
     </template>
     <template #item.actions="{ item }">
       <v-row>
