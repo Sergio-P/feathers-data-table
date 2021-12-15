@@ -2040,7 +2040,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3a344b94-vue-loader-template"}!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib??vue-loader-options!./src/components/FeathersDataTable.vue?vue&type=template&id=52eaa4f0&
+// CONCATENATED MODULE: ./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3a344b94-vue-loader-template"}!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib??vue-loader-options!./src/components/FeathersDataTable.vue?vue&type=template&id=7374c081&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-data-table',{attrs:{"headers":_vm.headers,"items":_vm.items,"options":_vm.options,"server-items-length":_vm.total,"loading":_vm.loading,"footer-props":_vm.footerProps,"must-sort":_vm.sortBy != null,"sort-by":_vm.sortBy ? _vm.sortBy : null,"item-class":function (item) { return _vm.rowClasses(item); }},on:{"update:options":function($event){_vm.options=$event},"click:row":_vm.clickRowHandler},scopedSlots:_vm._u([_vm._l((_vm.headers),function(attr){return {key:attr.itemslot,fn:function(ref){
 var item = ref.item;
 return [(!attr.customslot)?_c('div',{class:attr.classMap ? attr.classMap[item[attr.value]] : attr._class,domProps:{"innerHTML":_vm._s(attr.labelMap ? attr.labelMap[item[attr.value]] : item[attr.value])}}):_vm._t(attr.itemslot,null,{"item":item})]}}}),{key:"item.actions",fn:function(ref){
@@ -2053,7 +2053,7 @@ return [_c('v-icon',_vm._g({},on),[_vm._v(_vm._s(item.active ? "mdi-delete" : "m
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FeathersDataTable.vue?vue&type=template&id=52eaa4f0&
+// CONCATENATED MODULE: ./src/components/FeathersDataTable.vue?vue&type=template&id=7374c081&
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/core-js@3.18.2/node_modules/core-js/modules/es.object.to-string.js
 var es_object_to_string = __webpack_require__("c07d");
@@ -2250,6 +2250,12 @@ var es_array_find = __webpack_require__("f08d");
   },
   watch: {
     options: {
+      handler: function handler() {
+        this.getDataFromApi();
+      },
+      deep: true
+    },
+    query: {
       handler: function handler() {
         this.getDataFromApi();
       },

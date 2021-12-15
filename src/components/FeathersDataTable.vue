@@ -63,6 +63,12 @@ export default {
       },
       deep: true,
     },
+    query: {
+      handler() {
+        this.getDataFromApi();
+      },
+      deep: true,
+    },
   },
   mounted() {
     // this.getDataFromApi()

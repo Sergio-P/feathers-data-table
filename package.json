@@ -1,6 +1,6 @@
 {
   "name": "feathers-data-table",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/feathersDataTable.common.js",
   "author": "Sergio Peñafiel <sergio@create.cl>",
   "repository": {
